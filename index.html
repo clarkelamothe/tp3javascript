@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style/style.css" />
+        <title>Supermercado Argento</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.svg" alt="Logo Supermercado" />
+                </a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#carrito">CARRITO</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li class="iniciar"><a href="#">INICIAR SESION</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="inicio">
+            <main>
+                <h1>
+                    Mercado Argento <br />
+                    en tu casa
+                </h1>
+                <button><a href="#mercado">Hacé tu pedido Aquí</a></button>
+            </main>
+        </div>
+
+        <div class="mercado" id="mercado">
+            <h2 class="titulo">Productos del Mercado</h2>
+            <div class="listaProductos">
+                <!-- <section class="card">
+                <img src="./img/cereza.jpg" alt="">
+                <div class="infoProducto">
+                    <h2>Cereza</h2>
+                    <p>$ 35</p>
+                </div>
+                <div class="agregarAlCarrito">
+                    <button>Agregar al Carrito</button>
+                </div>
+            </section> -->
+            </div>
+        </div>
+
+        <div class="miCarrito" id="carrito">
+            <h2 class="titulo">Mi Carrito</h2>
+            <div class="carrito">
+                <div class="productoCarrito">
+                    <label for="productos">Productos</label>
+                    <textarea type="text" id="productos"></textarea>
+                </div>
+                <div class="preciosTotal">
+                    <div class="precios">
+                        <label for="preciosProductoComprado">Precios</label>
+                        <textarea
+                            type="text"
+                            id="preciosProductoComprado"
+                        ></textarea>
+                        <p></p>
+                    </div>
+                    <div id="total">
+                        <h6>Total :</h6>
+
+                        <!-- <textarea type="text" id="precioFinal"></textarea> -->
+                    </div>
+                    <button onclick="realizarCompra()">Realizar Compra</button>
+                    <button onclick="remove(realizarCompra)">cero</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="redesSociales">
+                <div class="seguinos">
+                    <p>Seguinos en redes</p>
+                </div>
+                <div class="iconosRedes">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./script/script.js"></script>
+    </body>
+</html>

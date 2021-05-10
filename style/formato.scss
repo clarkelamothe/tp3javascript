@@ -1,0 +1,32 @@
+$color: (
+    color1: #F7F6F2,
+    color2: #86B555,
+    color3: #357D7B,
+    color4: #DE6A40,
+);
+$tipografia:(
+    general: 'Calibri',
+
+);
+// estilos generales
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+// funciones
+@mixin dimension($height, $width) {
+    height: $height;
+    width: $width;
+}
+@mixin posicion ($direction, $mainAxis, $secondaryAxis) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $mainAxis;
+    align-items: $secondaryAxis;
+}

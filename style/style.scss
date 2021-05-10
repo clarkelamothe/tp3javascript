@@ -1,0 +1,224 @@
+@import 'formato';
+body{
+    header{
+        @include posicion(row, space-between, center);
+        @include dimension(auto,100vw);
+        flex-wrap: wrap;
+        background-color: map-get($color,color1);
+        padding: 1em 5em;
+        .logo{
+            margin-bottom: 1em;
+            a{
+                img{
+                    @include dimension(50px,50px);
+                }
+            }
+        }
+        nav{
+            ul{
+                @include posicion(row, space-between, center);
+                flex-wrap: wrap;
+                gap: 1.5em;
+                li{
+                    a{
+                        color: map-get($color, color4);
+                    }
+                    &.iniciar{
+                        border: 1px solid map-get($color, color2);
+                        padding: 0.5em;
+                        cursor: pointer;
+                        text-align: center;
+                        border-radius: 4px;
+                        a{
+                            color: map-get($color, color2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .inicio{
+        @include dimension(630px, 100vw);
+        @include posicion(row, center, center);
+        background-color: white;
+        background-image: url(../img/bg-header.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        main{
+            text-align: center;
+            margin-left: 6em;
+            margin-top: 6em;
+            h1{
+                font-size: 3em;
+                color: map-get($color, color2 );
+                margin-bottom: 1em;
+            }
+            button{
+                background-color: map-get($color, color4);
+                width: 200px;
+                height: 40px;
+                border-radius: 4px;
+                border: 0;
+                font-size: 1em;
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+    .mercado{
+        @include dimension(auto, 100vw);
+        @include posicion(column, flex-start, center);
+        background-color: map-get($color,color1);
+        h2.titulo{
+            margin: 2em 0;
+            color: map-get($color,color4);
+            font-size: 1.5em;
+        }
+        .listaProductos{
+            @include dimension(auto, auto);
+            @include posicion(row, center, center);
+            flex-wrap: wrap;
+            // background-color: lightcoral;
+            .card{
+                @include dimension(300px, 250px);
+                @include posicion(column, flex-start, flex-start);
+                background-color:map-get($color, color1);
+                border-radius: 4px;
+                margin-left: 2em;
+                margin-bottom: 2em;
+                overflow: hidden;
+                cursor: pointer;
+                border: 0.1px solid map-get($color, color2);
+                // box-shadow: 0px 5px 15px -4px rgba(0,0,0,0.64);
+                &:hover{
+                    box-shadow: 5px 9px 15px -4px rgba(0,0,0,0.19);
+                }
+                img{
+                    @include dimension(50%,100%);
+                    object-fit: cover;
+                }
+                .infoProducto{
+                    @include dimension(auto, 100%);
+                    @include posicion(row, space-between,center);
+                    padding: 1em;
+                    h2{
+                        font-size: 1.2em;
+                        font-weight: lighter;
+                    }
+                    p{
+                        font-size: 2em;
+                        font-weight: light;
+                    }
+                }
+                .agregarAlCarrito{
+                    color: black;
+                    border: 1px solid map-get($color, color4);
+                    border-radius: 4px;
+                    padding: 0.5em 1em;
+                    margin: auto;
+                    button{
+                        background-color: transparent;
+                        border: none;
+                        font-size: 1em;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .miCarrito{
+        @include dimension(100vh, 100vw);
+        @include posicion(column, center, center);
+        flex-wrap: wrap;
+        h2.titulo{
+            margin: 2em 0;
+            color: map-get($color,color4);
+            font-size: 1.5em;
+        }
+        .carrito{
+            @include dimension(auto, 70vw);
+            @include posicion(row, space-around, flex-start);
+            flex-wrap: wrap;
+            background-color: map-get($color, color1 );
+            box-shadow: 5px 9px 15px -4px rgba(0,0,0,0.19);
+            padding: 2em;
+
+            .productoCarrito{
+                @include posicion(column, flex-start, flex-start);
+                label{
+                    margin: 1em;
+                }
+                textarea{
+                    @include dimension(200px, 200px);
+                    font-size: 1.2em;
+                    resize: vertical;
+                    border: 0.1px solid map-get($color, color2);
+                }
+            }
+            .preciosTotal{
+                .precios{
+                    @include posicion(column, flex-end, flex-end);
+                    label{
+                        margin: 1em;
+                    }
+                    textarea{
+                        @include dimension(50px, 100px);
+                        border: 0.1px solid map-get($color, color2);
+                        resize: vertical;
+                        margin-bottom: 5em;
+                        font-size: 1.2em;
+                    }
+                }
+                .total{
+                    @include posicion(row, flex-start, center);
+                    label{
+                        margin: 2em;
+                    }
+                    textarea{
+                        @include dimension(25px,100px);
+                        font-size: 2em;
+                        font-weight: bold;
+                        resize: none;
+                        border: none;
+                        text-align: center center;
+                    }
+                }
+                button{
+                    background-color: map-get($color,color4 );
+                    color: map-get($color, color1 );
+                    border:none;
+                    border-radius: 4px;
+                    padding: 0.5em 1em;
+                    margin-top: 2em;
+                    font-size: 1em;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+    footer{
+        @include posicion(column, center, center);
+        @include dimension(200px, 100vw);
+        color: map-get($color, color1);
+        background-color: gray;
+        font-size: 2em;
+        .redesSociales{
+            @include posicion(column, center, center);
+        }
+        .iconosRedes{
+            margin-top: 1em;
+            a{
+                color: map-get($color, color1);
+            }
+        }
+    }
+}
